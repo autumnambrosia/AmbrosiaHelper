@@ -1,0 +1,82 @@
+mods.AmbrosiaHelper.name=AmbrosiaHelper
+
+# Forcemove Field
+entities.AmbrosiaHelper/ForceMoveField.placements.name.left=Forcemove Field (Left)
+entities.AmbrosiaHelper/ForceMoveField.placements.description.left=Applies leftwards forcemove to the player for a specified time.
+entities.AmbrosiaHelper/ForceMoveField.placements.name.right=Forcemove Field (Right)
+entities.AmbrosiaHelper/ForceMoveField.placements.description.right=Applies rightwards forcemove to the player for a specified time.
+entities.AmbrosiaHelper/ForceMoveField.placements.name.revoke=Forcemove Field (Revoke)
+entities.AmbrosiaHelper/ForceMoveField.placements.description.revoke=Revokes forcemove from the player.
+entities.AmbrosiaHelper/ForceMoveField.placements.name.revokeonwalljump=Forcemove Field (Revoke on Walljump)
+entities.AmbrosiaHelper/ForceMoveField.placements.description.revokeonwalljump=Revokes forcemove from the player if they walljump.
+
+entities.AmbrosiaHelper/ForceMoveField.attributes.name.direction=Mode
+entities.AmbrosiaHelper/ForceMoveField.attributes.description.direction=What genre of forcemove to apply.\nLeft and Right apply forcemove in that direction.\nRevoke removes any forcemove the player already has.\nRevoke on Walljump also removes forcemove, but only when the player does a walljump (should be useful for walljumps directly after a spring).\nRevoke on walljump feels pretty jank honestly idk i didnt feel like fixing it rn
+
+entities.AmbrosiaHelper/ForceMoveField.attributes.description.time=Time to apply forcemove for in seconds. Will only do anything if the type is Left or Right.
+entities.AmbrosiaHelper/ForceMoveField.attributes.description.renders=Controls whether the field has any visuals or not
+entities.AmbrosiaHelper/ForceMoveField.attributes.description.audible=Controls whether sound effects play or not
+
+# entities.AmbrosiaHelper/ForceMoveField.attributes.name.effects=Forcemove Effects
+# entities.AmbrosiaHelper/ForceMoveField.attributes.name.colornormal=Color (Normal)
+# entities.AmbrosiaHelper/ForceMoveField.attributes.name.colorstart=Color (Gradient Start)
+# entities.AmbrosiaHelper/ForceMoveField.attributes.name.colorend=Color (Gradient End)
+# entities.AmbrosiaHelper/ForceMoveField.attributes.description.effects=If this is enabled, the field will change colors for how much forcemove is left, blinking and making a sound effect once forcemove has ran out.
+# entities.AmbrosiaHelper/ForceMoveField.attributes.description.colornormal=Set this field to override the default color for how the field is normally.
+# entities.AmbrosiaHelper/ForceMoveField.attributes.description.colorstart=Set this field to override the default for the field's starting gradient color.
+# entities.AmbrosiaHelper/ForceMoveField.attributes.description.colorend=Set this field to override the default for the field's ending gradient color.
+
+# Flag on Forcemove Controller
+entities.AmbrosiaHelper/FlagOnForceMoveController.placements.name.main=Flag on Forcemove Controller
+entities.AmbrosiaHelper/FlagOnForceMoveController.placements.description.main=This controller sets a flag while the player has forcemove. Can be customized to only activate on a specific direction.
+
+entities.AmbrosiaHelper/FlagOnForceMoveController.attributes.name.direction=Direction Constraints
+entities.AmbrosiaHelper/FlagOnForceMoveController.attributes.description.direction=Adds more conditions for when the flag will be set.\nIf this is set to "Left", it will only set the flag while the player has leftwards forcemove, and rightwards forcemove will do nothing.
+entities.AmbrosiaHelper/FlagOnForceMoveController.attributes.name.flag=Flag Name
+entities.AmbrosiaHelper/FlagOnForceMoveController.attributes.description.flag=ooo you found my secret tooltip ooglyooglygoobly
+
+# Honey
+entities.AmbrosiaHelper/BoostHoney.placements.name.left=Boost Honey (Left)
+entities.AmbrosiaHelper/BoostHoney.placements.description.left=Strange sticky substance that attaches to things like spikes and springs do.\nBehaves similarly to Wall Boosters; when you're on a surface with them, you'll get extra speed once you jump off.\nThe direction also toggles based off of core mode: it is vertical when Hot, and horizontal when Cold. Can be any direction on None core mode.
+entities.AmbrosiaHelper/BoostHoney.placements.name.right=Boost Honey (Right)
+entities.AmbrosiaHelper/BoostHoney.placements.description.right=Strange sticky substance that attaches to things like spikes and springs do.\nBehaves similarly to Wall Boosters; when you're on a surface with them, you'll get extra speed once you jump off.\nThe direction also toggles based off of core mode: it is vertical when Hot, and horizontal when Cold. Can be any direction on None core mode.
+entities.AmbrosiaHelper/BoostHoney.placements.name.up=Boost Honey (Up)
+entities.AmbrosiaHelper/BoostHoney.placements.description.up=Strange sticky substance that attaches to things like spikes and springs do.\nBehaves similarly to Wall Boosters; when you're on a surface with them, you'll get extra speed once you jump off.\nThe direction also toggles based off of core mode: it is vertical when Hot, and horizontal when Cold. Can be any direction on None core mode.
+
+entities.AmbrosiaHelper/BoostHoney.attributes.name.fallbackDir=Direction
+entities.AmbrosiaHelper/BoostHoney.attributes.description.fallbackDir=The direction for when the core mode is None or when it has to choose between two directions horizontally.\nIf it has to choose a horizontal direction, setting Up will default to Right.
+
+entities.AmbrosiaHelper/BoostHoney.attributes.name.useCoreMode=Use Core Mode
+entities.AmbrosiaHelper/BoostHoney.attributes.description.useCoreMode=i like my core mode dont turn me off :pleading: :pleading::pleading:
+
+# Metal Bumper
+entities.AmbrosiaHelper/MetalBumper.placements.name.normal=Metal Bumper
+entities.AmbrosiaHelper/MetalBumper.placements.description.normal=Like a bumper, but weirder. Launches you in a direction when you hit it.\nIn hot mode, the direction is the opposite side you enter it, but\nin cold mode, it's on the same side like a regular Bumper (although the trajectories are not exactly the same).\nDefaults to hot behavior on None core mode. Idea partially by evelyn
+
+entities.AmbrosiaHelper/MetalBumper.attributes.description.static=Your average static checkbox. If checked, this disables the default bumper "wobble" and keeps the metal bumper in place.
+entities.AmbrosiaHelper/MetalBumper.attributes.name.coremode=Core Mode
+entities.AmbrosiaHelper/MetalBumper.attributes.description.coremode=Whether the metal bumper conforms to core mode, and if it doesn't, which behavior it acts on.
+
+entities.AmbrosiaHelper/MetalBumper.placements.name.custom=Metal Bumper (Customizable)
+entities.AmbrosiaHelper/MetalBumper.placements.description.custom=A seperate placement of Metal Bumper that exposes a lot more custom options. Sidney wanted this
+
+entities.AmbrosiaHelper/MetalBumper.attributes.name.sfxname=Hit SFX
+entities.AmbrosiaHelper/MetalBumper.attributes.description.sfxname=Name of the FMOD event to play when hitting the bumper
+entities.AmbrosiaHelper/MetalBumper.attributes.name.respawnsfxname=Respawn SFX
+entities.AmbrosiaHelper/MetalBumper.attributes.description.respawnsfxname=Name of the FMOD event to play when the bumper respawns
+
+entities.AmbrosiaHelper/MetalBumper.attributes.name.spritename=Sprite Name
+entities.AmbrosiaHelper/MetalBumper.attributes.description.spritename=The name of the Sprites.xml sprite to use
+entities.AmbrosiaHelper/MetalBumper.attributes.name.speed=Launch Speed
+entities.AmbrosiaHelper/MetalBumper.attributes.description.speed=The number to multiply the angle vector by to determine the player's launch speed. Default for metal bumpers is 300
+
+entities.AmbrosiaHelper/MetalBumper.attributes.name.coldparticles=Cold Particle Colors
+entities.AmbrosiaHelper/MetalBumper.attributes.description.coldparticles=A comma-seperated list of exactly 2 hex code colors to determine the bumper particle colors when the core mode is set to Cold or None.
+entities.AmbrosiaHelper/MetalBumper.attributes.name.hotparticles=Hot Particle Colors
+entities.AmbrosiaHelper/MetalBumper.attributes.description.hotparticles=A comma-seperated list of exactly 2 hex code colors to determine the bumper particle colors when the core mode is set to Hot.
+
+entities.AmbrosiaHelper/MetalBumper.attributes.name.respawntime=Respawn Time
+entities.AmbrosiaHelper/MetalBumper.attributes.description.respawntime=Set a custom time in seconds and bumper will take that long amount of time to respawn. Default is 0.5
+
+entities.AmbrosiaHelper/MetalBumper.attributes.name.anglezones=Angle Zones
+entities.AmbrosiaHelper/MetalBumper.attributes.description.anglezones=Metal bumpers are divided into zones around its perimeter of equal size, and the direction they send you in is determined by which zone you land on.\nThe normal number of these is 8, but you can change it to any integer if you'd like

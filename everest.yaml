@@ -1,0 +1,8 @@
+- DLL: bin/AmbrosiaHelper.dll
+  Name: AmbrosiaHelper
+  Version: 1.0.0
+  Dependencies:
+    - Name: Everest
+      Version: 1.6305.0
+    - Name: EverestCore
+      Version: 1.5935.0

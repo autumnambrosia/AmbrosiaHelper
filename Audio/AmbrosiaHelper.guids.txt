@@ -1,0 +1,6 @@
+{c4bb5676-f6b6-449d-a153-44c53ca18a77} bank:/AmbrosiaHelper
+{26ce93f0-b6b4-44e6-9dd0-b377cac9ee2e} event:/AmbrosiaHelper/fmfield_start
+{afa517be-ba33-4ba9-8c72-c2db6dfbd903} event:/AmbrosiaHelper/fmfield_end
+{c48f5a73-db84-461c-a418-7f9d37a11402} event:/AmbrosiaHelper/fmfield_revoke
+{8bdb14dc-50af-4e1a-bf52-c6bcc942d687} event:/AmbrosiaHelper/honey_enter
+{88420e21-e716-4cf5-bde2-ba8ddd4f264d} event:/AmbrosiaHelper/honey_jump
