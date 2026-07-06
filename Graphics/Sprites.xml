@@ -2,8 +2,6 @@
 <Sprites>
     <AmbrosiaHelper_metalbumper path="objects/AmbrosiaHelper/metalbumper/" start="idle">
         <Center/>
-        <!-- <Anim id="hit"   path="idle" frames="34-42" delay="0.06" goto="off"/> -->
-		
         <Loop id="idle" path="idle" frames="0-1"  delay="0.15"/>
 		<Anim id="hit"  path="idle" frames="2-5"  delay="0.06" goto="off"/>
         <Loop id="off"  path="idle" frames="6-7"  delay="0.06"/>
@@ -12,8 +10,6 @@
 
     <AmbrosiaHelper_metalbumper_evil path="objects/AmbrosiaHelper/metalbumper/" start="idle">
         <Center/>
-        <!-- <Anim id="hit"   path="idle" frames="34-42" delay="0.06" goto="off"/> -->
-		
         <Loop id="idle" path="evil" frames="0-1"  delay="0.15"/>
 		<Anim id="hit"  path="evil" frames="2-5"  delay="0.06" goto="off"/>
         <Loop id="off"  path="evil" frames="6-7"  delay="0.06"/>

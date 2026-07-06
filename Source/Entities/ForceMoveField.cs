@@ -36,7 +36,7 @@ public class ForceMoveField : Entity {
 
     public ForceMoveField(EntityData data, Vector2 offset)
         : base(data.Position + offset) {
-        mode = (Forcemoves)data.Int("direction");
+        mode = data.Enum<Forcemoves>("direction");
         fmTimer = data.Float("time");
 
         Visible = data.Bool("renders"); // No need to assign it to a variable first!
@@ -66,6 +66,7 @@ public class ForceMoveField : Entity {
         if (gradientTimer > 0f) return;
 
         switch (mode) {
+            #warning figure out what to do with this weird "revoke on walljump" orphan
             // For revoke modes, gradientTimer is set directly to 0 and my current code doesn't detect it as a flash, so we invoke flash manually
             case Forcemoves.RevokeOnWalljump:
                 // Only do it if, yknow, the player is walljumping
@@ -97,6 +98,8 @@ public class ForceMoveField : Entity {
     public override void Update() {
         base.Update();
 
+        // TODO i never tested this
+        /*
         // "Break" the field if forcemove gets overwritten by something else so it doesn't keep going anyway and look weird
         Player player = Scene.Tracker.GetEntity<Player>();
         if (player is not null) {
@@ -109,6 +112,7 @@ public class ForceMoveField : Entity {
                 Play("event:/AmbrosiaHelper/fmfield_revoke");
             }
         }
+        */
 
         // Update timer for white flash
         if (flashTimer > 0f) {
@@ -126,8 +130,8 @@ public class ForceMoveField : Entity {
         }
     }
 
-	public override void Render() {
-		base.Render();
+    public override void Render() {
+        base.Render();
 
         // Factor the flash color into the draw color that everything uses
         Color color = Color.Lerp(CalcDrawColor(), Color.White, Calc.Clamp(flashTimer / flashTimerMax, 0, 1));
@@ -135,7 +139,7 @@ public class ForceMoveField : Entity {
         Draw.Rect(Collider, color * 0.7f);
         Draw.HollowRect(Collider, color);
         icon.Color = color;
-	}
+    }
 
     private Color CalcDrawColor() {
         if (gradientTimer <= 0f) return colorNormal;

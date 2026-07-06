@@ -41,8 +41,8 @@ public class BoostHoney : Entity {
     public BoostHoney(EntityData data, Vector2 offset)
         : base(data.Position + offset) {
         useCoreMode = data.Bool("useCoreMode");
-        fallbackDir = (Directions)data.Int("fallbackDir");
-        placementDir = (Directions)data.Int("placementDir");
+        fallbackDir = data.Enum<Directions>("fallbackDir");
+        placementDir = data.Enum<Directions>("placementDir");
 
         Depth = Depths.Below;
         Collider = placementDir switch {
@@ -65,7 +65,7 @@ public class BoostHoney : Entity {
         Add(lavarect = new LavaRect(Collider.Width, Collider.Height, 4));
         lavarect.Position = Collider.Position; // Make it go in the right spot since we're changing stuff based off direction
 
-        // i don't really know what these values mean exactly
+        // gonna be honest i just put like random numbers into this one
         lavarect.SmallWaveAmplitude = 0.5f;
         lavarect.BigWaveAmplitude = 0.75f;
         lavarect.CurveAmplitude = 0f;
@@ -101,7 +101,7 @@ public class BoostHoney : Entity {
         if (mode == Session.CoreModes.Hot) return Directions.Up;
         // past this point core mode is cold
         if (placementDir != Directions.Up) return placementDir;
-        if (fallbackDir  != Directions.Up) return fallbackDir;
+        if ( fallbackDir != Directions.Up) return fallbackDir;
         return Directions.Right;
     }
 
@@ -110,7 +110,7 @@ public class BoostHoney : Entity {
         Directions.Up    => new Vector2(0f, -170f),
         Directions.Left  => new Vector2(-85f, 0f),
         Directions.Right => new Vector2( 85f, 0f),
-        _ => new Vector2(0, 0)
+        _ => Vector2.Zero
     };
 
     private Vector2 DetermineTileJustification(Directions x) => (placementDir, x) switch {
@@ -155,6 +155,7 @@ public class BoostHoney : Entity {
     }
 
     private void StaticMover_OnShake(Vector2 shake) {
+        // TODO this felt like kind of janky so see if you can maybe fix it but it's fine if you dont because it's like fine anyway
         // lavarect.Position = Collider.Position + shake;
         lavarect.Position = Collider.Position;
     }
@@ -183,6 +184,7 @@ public class BoostHoney : Entity {
         On.Celeste.Player.SuperWallJump += Honey_SuperWallJump;
 
         // Literally just for extra audio effects
+        // 
         On.Celeste.Player.ClimbBegin += Honey_ClimbBegin;
         //IL.Celeste.Player.OnCollideV += Honey_OnCollideV;
     }

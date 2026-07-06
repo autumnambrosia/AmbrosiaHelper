@@ -12,13 +12,13 @@ metalbumper.texture = function(room, entity)
 end
 metalbumper.nodeLimits = {0, 1}
 metalbumper.placements = {
-    {
-        name = "normal",
-        data = {
-            static = true,
-            coremode = 0
-        }
-    },
+    name = "normal",
+    data = {
+        static = true,
+        coremode = 0
+        --custom = false
+    }
+    --[[
     {
         name = "custom",
         data = {
@@ -34,9 +34,11 @@ metalbumper.placements = {
             anglezones = 8,
             custom = true -- ok i guess
         }
-    },
+    }
+    ]]
 }
 
+--[[
 metalbumper.fieldOrder = {"x", "y", "coremode", "anglezones", "respawntime", "speed", "sfxname", "respawnsfxname", "coldparticles", "hotparticles", "spritename"}
 -- i need ignoredFields because the fuckass particle colors color list thing makes it so it shows even when its nil so i kinda just hide it manuall
 -- i also have no idea why tf it takes entity instead of room,entity that was fun to figure out
@@ -48,6 +50,7 @@ metalbumper.ignoredFields = function(entity)
     end
     return tbl
 end
+]]
 
 metalbumper.fieldInformation = {
     coremode = {
@@ -57,7 +60,8 @@ metalbumper.fieldInformation = {
             ["Only Hot"] = 1,
             ["Only Cold"] = 2
         }
-    },
+    }
+    --[[
     sfxname = {
         editable = true,
         options = {
@@ -92,6 +96,7 @@ metalbumper.fieldInformation = {
             allowXNAColors = false
         }
     }
+    ]]
 }
 
 return metalbumper

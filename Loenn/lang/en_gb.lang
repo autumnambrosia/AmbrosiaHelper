@@ -2,13 +2,13 @@ mods.AmbrosiaHelper.name=AmbrosiaHelper
 
 # Forcemove Field
 entities.AmbrosiaHelper/ForceMoveField.placements.name.left=Forcemove Field (Left)
-entities.AmbrosiaHelper/ForceMoveField.placements.description.left=Applies leftwards forcemove to the player for a specified time.
+entities.AmbrosiaHelper/ForceMoveField.placements.description.left=Applies leftwards forcemove to the player for a specified time. (This entity is also jank)
 entities.AmbrosiaHelper/ForceMoveField.placements.name.right=Forcemove Field (Right)
-entities.AmbrosiaHelper/ForceMoveField.placements.description.right=Applies rightwards forcemove to the player for a specified time.
+entities.AmbrosiaHelper/ForceMoveField.placements.description.right=Applies rightwards forcemove to the player for a specified time. (This entity is also jank)
 entities.AmbrosiaHelper/ForceMoveField.placements.name.revoke=Forcemove Field (Revoke)
-entities.AmbrosiaHelper/ForceMoveField.placements.description.revoke=Revokes forcemove from the player.
+entities.AmbrosiaHelper/ForceMoveField.placements.description.revoke=Revokes forcemove from the player. (This entity is also jank)
 entities.AmbrosiaHelper/ForceMoveField.placements.name.revokeonwalljump=Forcemove Field (Revoke on Walljump)
-entities.AmbrosiaHelper/ForceMoveField.placements.description.revokeonwalljump=Revokes forcemove from the player if they walljump.
+entities.AmbrosiaHelper/ForceMoveField.placements.description.revokeonwalljump=Revokes forcemove from the player if they walljump. (This entity is also jank)
 
 entities.AmbrosiaHelper/ForceMoveField.attributes.name.direction=Mode
 entities.AmbrosiaHelper/ForceMoveField.attributes.description.direction=What genre of forcemove to apply.\nLeft and Right apply forcemove in that direction.\nRevoke removes any forcemove the player already has.\nRevoke on Walljump also removes forcemove, but only when the player does a walljump (should be useful for walljumps directly after a spring).\nRevoke on walljump feels pretty jank honestly idk i didnt feel like fixing it rn
@@ -57,26 +57,21 @@ entities.AmbrosiaHelper/MetalBumper.attributes.description.static=Your average s
 entities.AmbrosiaHelper/MetalBumper.attributes.name.coremode=Core Mode
 entities.AmbrosiaHelper/MetalBumper.attributes.description.coremode=Whether the metal bumper conforms to core mode, and if it doesn't, which behavior it acts on.
 
-entities.AmbrosiaHelper/MetalBumper.placements.name.custom=Metal Bumper (Customizable)
-entities.AmbrosiaHelper/MetalBumper.placements.description.custom=A seperate placement of Metal Bumper that exposes a lot more custom options. Sidney wanted this
-
-entities.AmbrosiaHelper/MetalBumper.attributes.name.sfxname=Hit SFX
-entities.AmbrosiaHelper/MetalBumper.attributes.description.sfxname=Name of the FMOD event to play when hitting the bumper
-entities.AmbrosiaHelper/MetalBumper.attributes.name.respawnsfxname=Respawn SFX
-entities.AmbrosiaHelper/MetalBumper.attributes.description.respawnsfxname=Name of the FMOD event to play when the bumper respawns
-
-entities.AmbrosiaHelper/MetalBumper.attributes.name.spritename=Sprite Name
-entities.AmbrosiaHelper/MetalBumper.attributes.description.spritename=The name of the Sprites.xml sprite to use
-entities.AmbrosiaHelper/MetalBumper.attributes.name.speed=Launch Speed
-entities.AmbrosiaHelper/MetalBumper.attributes.description.speed=The number to multiply the angle vector by to determine the player's launch speed. Default for metal bumpers is 300
-
-entities.AmbrosiaHelper/MetalBumper.attributes.name.coldparticles=Cold Particle Colors
-entities.AmbrosiaHelper/MetalBumper.attributes.description.coldparticles=A comma-seperated list of exactly 2 hex code colors to determine the bumper particle colors when the core mode is set to Cold or None.
-entities.AmbrosiaHelper/MetalBumper.attributes.name.hotparticles=Hot Particle Colors
-entities.AmbrosiaHelper/MetalBumper.attributes.description.hotparticles=A comma-seperated list of exactly 2 hex code colors to determine the bumper particle colors when the core mode is set to Hot.
-
-entities.AmbrosiaHelper/MetalBumper.attributes.name.respawntime=Respawn Time
-entities.AmbrosiaHelper/MetalBumper.attributes.description.respawntime=Set a custom time in seconds and bumper will take that long amount of time to respawn. Default is 0.5
-
-entities.AmbrosiaHelper/MetalBumper.attributes.name.anglezones=Angle Zones
-entities.AmbrosiaHelper/MetalBumper.attributes.description.anglezones=Metal bumpers are divided into zones around its perimeter of equal size, and the direction they send you in is determined by which zone you land on.\nThe normal number of these is 8, but you can change it to any integer if you'd like
+# entities.AmbrosiaHelper/MetalBumper.placements.name.custom=Metal Bumper (Customizable)
+# entities.AmbrosiaHelper/MetalBumper.placements.description.custom=A seperate placement of Metal Bumper that exposes a lot more custom options. Sidney wanted this
+# entities.AmbrosiaHelper/MetalBumper.attributes.name.sfxname=Hit SFX
+# entities.AmbrosiaHelper/MetalBumper.attributes.description.sfxname=Name of the FMOD event to play when hitting the bumper
+# entities.AmbrosiaHelper/MetalBumper.attributes.name.respawnsfxname=Respawn SFX
+# entities.AmbrosiaHelper/MetalBumper.attributes.description.respawnsfxname=Name of the FMOD event to play when the bumper respawns
+# entities.AmbrosiaHelper/MetalBumper.attributes.name.spritename=Sprite Name
+# entities.AmbrosiaHelper/MetalBumper.attributes.description.spritename=The name of the Sprites.xml sprite to use
+# entities.AmbrosiaHelper/MetalBumper.attributes.name.speed=Launch Speed
+# entities.AmbrosiaHelper/MetalBumper.attributes.description.speed=The number to multiply the angle vector by to determine the player's launch speed. Default for metal bumpers is 300
+# entities.AmbrosiaHelper/MetalBumper.attributes.name.coldparticles=Cold Particle Colors
+# entities.AmbrosiaHelper/MetalBumper.attributes.description.coldparticles=A comma-seperated list of exactly 2 hex code colors to determine the bumper particle colors when the core mode is set to Cold or None.
+# entities.AmbrosiaHelper/MetalBumper.attributes.name.hotparticles=Hot Particle Colors
+# entities.AmbrosiaHelper/MetalBumper.attributes.description.hotparticles=A comma-seperated list of exactly 2 hex code colors to determine the bumper particle colors when the core mode is set to Hot.
+# entities.AmbrosiaHelper/MetalBumper.attributes.name.respawntime=Respawn Time
+# entities.AmbrosiaHelper/MetalBumper.attributes.description.respawntime=Set a custom time in seconds and bumper will take that long amount of time to respawn. Default is 0.5
+# entities.AmbrosiaHelper/MetalBumper.attributes.name.anglezones=Angle Zones
+# entities.AmbrosiaHelper/MetalBumper.attributes.description.anglezones=Metal bumpers are divided into zones around its perimeter of equal size, and the direction they send you in is determined by which zone you land on.\nThe normal number of these is 8, but you can change it to any integer if you'd like
