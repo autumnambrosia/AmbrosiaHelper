@@ -75,3 +75,7 @@ entities.AmbrosiaHelper/MetalBumper.attributes.description.coremode=Whether the 
 # entities.AmbrosiaHelper/MetalBumper.attributes.description.respawntime=Set a custom time in seconds and bumper will take that long amount of time to respawn. Default is 0.5
 # entities.AmbrosiaHelper/MetalBumper.attributes.name.anglezones=Angle Zones
 # entities.AmbrosiaHelper/MetalBumper.attributes.description.anglezones=Metal bumpers are divided into zones around its perimeter of equal size, and the direction they send you in is determined by which zone you land on.\nThe normal number of these is 8, but you can change it to any integer if you'd like
+
+# Chilling Core Block
+entities.AmbrosiaHelper/ChillingCoreBlock.placements.name.ice=Chilling Core Block
+entities.AmbrosiaHelper/ChillingCoreBlock.placements.description.ice=A version of ice mode Core Blocks that's so cold it gives freeze frames! Hot mode not included.

@@ -4,3 +4,5 @@
 {c48f5a73-db84-461c-a418-7f9d37a11402} event:/AmbrosiaHelper/fmfield_revoke
 {8bdb14dc-50af-4e1a-bf52-c6bcc942d687} event:/AmbrosiaHelper/honey_enter
 {88420e21-e716-4cf5-bde2-ba8ddd4f264d} event:/AmbrosiaHelper/honey_jump
+{4780dd2a-a422-40e9-82db-62111bd1725d} event:/AmbrosiaHelper/chillingblock_reappear
+{7895a812-326a-4032-908c-30482674af54} event:/AmbrosiaHelper/chillingblock_touch

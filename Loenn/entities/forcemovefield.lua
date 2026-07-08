@@ -61,7 +61,7 @@ forcemovefield.fieldInformation = {
             Left = -1,
             Right = 1,
             Revoke = 0,
-            RevokeOnWalljump = -2,
+            RevokeOnWalljump = -2
         }
     },
     time = {

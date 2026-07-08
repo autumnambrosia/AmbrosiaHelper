@@ -3,16 +3,21 @@
     <AmbrosiaHelper_metalbumper path="objects/AmbrosiaHelper/metalbumper/" start="idle">
         <Center/>
         <Loop id="idle" path="idle" frames="0-1"  delay="0.15"/>
-		<Anim id="hit"  path="idle" frames="2-5"  delay="0.06" goto="off"/>
+        <Anim id="hit"  path="idle" frames="2-5"  delay="0.06" goto="off"/>
         <Loop id="off"  path="idle" frames="6-7"  delay="0.06"/>
-		<Anim id="on"   path="idle" frames="8-11" delay="0.06" goto="idle"/>
+        <Anim id="on"   path="idle" frames="8-11" delay="0.06" goto="idle"/>
     </AmbrosiaHelper_metalbumper>
 
     <AmbrosiaHelper_metalbumper_evil path="objects/AmbrosiaHelper/metalbumper/" start="idle">
         <Center/>
         <Loop id="idle" path="evil" frames="0-1"  delay="0.15"/>
-		<Anim id="hit"  path="evil" frames="2-5"  delay="0.06" goto="off"/>
+        <Anim id="hit"  path="evil" frames="2-5"  delay="0.06" goto="off"/>
         <Loop id="off"  path="evil" frames="6-7"  delay="0.06"/>
-		<Anim id="on"   path="evil" frames="8-11" delay="0.06" goto="idle"/>
+        <Anim id="on"   path="evil" frames="8-11" delay="0.06" goto="idle"/>
     </AmbrosiaHelper_metalbumper_evil>
+
+    <AmbrosiaHelper_chillingsnowflake path="objects/AmbrosiaHelper/chillingcoreblock/" start="idle">
+        <Center/>
+        <Loop id="idle" path="ice_center" delay="0.1"/>
+    </AmbrosiaHelper_chillingsnowflake>
 </Sprites>
