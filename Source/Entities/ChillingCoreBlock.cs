@@ -35,11 +35,11 @@ public class ChillingCoreBlock : BounceBlock {
         ToggleSprite();
     }
 
-    [MonoModLinkTo("Monocle.Entity", "System.Void Update()")]
-    public extern void Entity_Update();
+    [MonoModLinkTo("Celeste.Solid", "System.Void Update()")]
+    public extern void Solid_Update();
 
     public override void Update() {
-        Entity_Update();
+        Solid_Update();
         reappearFlash = Calc.Approach(reappearFlash, 0f, Engine.DeltaTime * 8f);
 
         switch (state) {
@@ -52,7 +52,7 @@ public class ChillingCoreBlock : BounceBlock {
                     state = States.WindingUp;
 
                     Input.Rumble(RumbleStrength.Medium, RumbleLength.Medium);
-                    // StartShaking(0.2f);
+                    StartShaking(0.2f);
                     Audio.Play("event:/AmbrosiaHelper/chillingblock_touch", Center);
                 }
                 break;
@@ -64,11 +64,9 @@ public class ChillingCoreBlock : BounceBlock {
                 Vector2 liftSpeed = (nextPos - ExactPosition).SafeNormalize(moveSpeed / 3f);
                 MoveTo(nextPos, liftSpeed);
 
-                /*
-                if (Vector2.DistanceSquared(ExactPosition, targetpos) <= 12f) {
+                if (Vector2.DistanceSquared(ExactPosition, targetPos) <= 12f) {
                     StartShaking(0.1f);
                 }
-                */
                 if (Vector2.DistanceSquared(ExactPosition, targetPos) <= 2f) {
                     Break(); // i know there are debris sprites i should probably change in code but i cba rn
                     Celeste.Freeze(0.05f); // currently 3f. no more than 4f or buffering doesn't work

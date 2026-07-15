@@ -51,7 +51,9 @@ entities.AmbrosiaHelper/BoostHoney.attributes.description.useCoreMode=i like my 
 
 # Metal Bumper
 entities.AmbrosiaHelper/MetalBumper.placements.name.normal=Metal Bumper
-entities.AmbrosiaHelper/MetalBumper.placements.description.normal=Like a bumper, but weirder. Launches you in a direction when you hit it.\nIn hot mode, the direction is the opposite side you enter it, but\nin cold mode, it's on the same side like a regular Bumper (although the trajectories are not exactly the same).\nDefaults to hot behavior on None core mode. Idea partially by evelyn
+entities.AmbrosiaHelper/MetalBumper.placements.description.normal=Like a bumper, but weirder. Instead of a normal Bumper's 4 zones, Metal Bumpers\nhave 8 symmetrical launch zones for each of the 8 directions. Additionally, in\nhot mode, the direction it launches you in is the opposite side you enter it,\nbut in cold mode, it's on the same side like a regular Bumper.\nDefaults to hot behavior on None core mode. Idea partially by evelyn
+
+# Like a bumper, but weirder. Launches you in a direction when you hit it.\nIn hot mode, the direction is the opposite side you enter it, but\nin cold mode, it's on the same side like a regular Bumper (although the trajectories are not exactly the same).\nDefaults to hot behavior on None core mode. Idea partially by evelyn
 
 entities.AmbrosiaHelper/MetalBumper.attributes.description.static=Your average static checkbox. If checked, this disables the default bumper "wobble" and keeps the metal bumper in place.
 entities.AmbrosiaHelper/MetalBumper.attributes.name.coremode=Core Mode
@@ -78,4 +80,8 @@ entities.AmbrosiaHelper/MetalBumper.attributes.description.coremode=Whether the 
 
 # Chilling Core Block
 entities.AmbrosiaHelper/ChillingCoreBlock.placements.name.ice=Chilling Core Block
-entities.AmbrosiaHelper/ChillingCoreBlock.placements.description.ice=A version of ice mode Core Blocks that's so cold it gives freeze frames! Hot mode not included.
+entities.AmbrosiaHelper/ChillingCoreBlock.placements.description.ice=A version of ice mode Core Blocks that's so cold it gives freeze frames when it breaks and respawns! Hot mode not included.
+
+# reform thing
+entities.AmbrosiaHelper/ReformIndicator.placements.name.r=Reform Indicator
+entities.AmbrosiaHelper/ReformIndicator.placements.description.r=Place this entity on top of a Core Block and it will become a reform indicator for that block, showing a block outline and visual meter for when and where the block will respawn.

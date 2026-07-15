@@ -1,5 +1,3 @@
-using System.Data.Common;
-using System.Runtime.CompilerServices;
 using Celeste.Mod.Entities;
 using Microsoft.Xna.Framework;
 using Monocle;
@@ -16,7 +14,7 @@ public class ForceMoveField : Entity {
         RevokeOnWalljump = -2
     }
 
-    internal static bool playerIsWalljumping;
+    // internal static bool playerIsWalljumping;
 
     private readonly Forcemoves mode;
     private readonly float fmTimer; // Forcemove timer
@@ -66,9 +64,9 @@ public class ForceMoveField : Entity {
         if (gradientTimer > 0f) return;
 
         switch (mode) {
-            #warning figure out what to do with this weird "revoke on walljump" orphan
-            // For revoke modes, gradientTimer is set directly to 0 and my current code doesn't detect it as a flash, so we invoke flash manually
+            // For revoke mode, gradientTimer is set directly to 0 and my current code doesn't detect it as a flash, so invoke flash manually
             case Forcemoves.RevokeOnWalljump:
+            /*
                 // Only do it if, yknow, the player is walljumping
                 if (playerIsWalljumping && player.forceMoveXTimer > 0) {
                     // RevokeOnWalljump revokes everything on walljump (:exploding_head:)
@@ -78,6 +76,7 @@ public class ForceMoveField : Entity {
                     playerIsWalljumping = false; // Should you do it here?
                 }
                 break;
+            */
             case Forcemoves.Revoke:
                 // Only revoke if you had forcemove to begin with to prevent effects triggering every frame
                 if (player.forceMoveXTimer > 0) {
@@ -98,7 +97,7 @@ public class ForceMoveField : Entity {
     public override void Update() {
         base.Update();
 
-        // TODO i never tested this
+        #warning TODO i never tested this
         /*
         // "Break" the field if forcemove gets overwritten by something else so it doesn't keep going anyway and look weird
         Player player = Scene.Tracker.GetEntity<Player>();
@@ -153,6 +152,7 @@ public class ForceMoveField : Entity {
 
     #region Hooks
 
+    /*
     internal static void Load() {
         On.Celeste.Player.WallJump += modWallJump;
     }
@@ -165,6 +165,7 @@ public class ForceMoveField : Entity {
         playerIsWalljumping = true;
         orig(self, dir);
     }
+    */
 
     #endregion
 }

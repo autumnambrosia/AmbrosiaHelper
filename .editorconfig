@@ -10,3 +10,4 @@ csharp_new_line_before_open_brace = none
 csharp_space_before_open_brace = none
 
 dotnet_diagnostic.IDE0044.severity = none
+dotnet_diagnostic.IDE0090.severity = none # "new" thing

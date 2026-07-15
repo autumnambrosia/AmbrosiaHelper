@@ -36,6 +36,7 @@ forcemovefield.placements = {
             audible = true
         }
     },
+    --[[
     {
         name = "revokeonwalljump",
         data = {
@@ -47,6 +48,7 @@ forcemovefield.placements = {
             audible = true
         }
     }
+    ]]
 }
 --[[
 colornormal = "eb8b47",
@@ -61,7 +63,7 @@ forcemovefield.fieldInformation = {
             Left = -1,
             Right = 1,
             Revoke = 0,
-            RevokeOnWalljump = -2
+            --RevokeOnWalljump = -2
         }
     },
     time = {
@@ -95,8 +97,8 @@ local drawable_text      = require('structs.drawable_text')
 ]]
 local switch = {
     [-1] = {{ 51/255, 187/255, 255/255, 1}, "Left"            ,  1,  0},
-    [ 1] = {{ 51/255, 187/255, 255/255, 1}, "Right"           , -1, -2},
-    [ 0] = {{231/255, 106/255,  68/255, 1}, "Revoke"          , -2, -1},
+    [ 1] = {{ 51/255, 187/255, 255/255, 1}, "Right"           , -1,  0}, -- -2 Y
+    [ 0] = {{231/255, 106/255,  68/255, 1}, "Revoke"          ,  0, -1}, -- -2 X
     [-2] = {{207/255,  70/255, 235/255, 1}, "RevokeOnWalljump",  0,  1}
 }
 

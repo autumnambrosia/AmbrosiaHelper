@@ -1,0 +1,2 @@
+AmbrosiaHelper_IndicateAllCoreBlocks_desc= Spawns an Ambrosia Helper Reform Indicator on top of every core block in every map.
+# AmbrosiaHelper_IndicateAllMoveBlocks_desc

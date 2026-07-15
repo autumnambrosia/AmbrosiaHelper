@@ -27,12 +27,14 @@ public class AmbrosiaHelperModule : EverestModule {
     }
 
     public override void Load() {
-        ForceMoveField.Load();
+        //ForceMoveField.Load();
         BoostHoney.Load();
+        ReformIndicator.Load();
     }
 
     public override void Unload() {
-        ForceMoveField.Unload();
+        //ForceMoveField.Unload();
         BoostHoney.Unload();
+        ReformIndicator.Unload();
     }
 }
