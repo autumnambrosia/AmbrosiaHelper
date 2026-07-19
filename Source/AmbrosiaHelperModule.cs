@@ -18,11 +18,9 @@ public class AmbrosiaHelperModule : EverestModule {
     public AmbrosiaHelperModule() {
         Instance = this;
 #if DEBUG
-        // debug builds use verbose logging
-        Logger.SetLogLevel(nameof(AmbrosiaHelperModule), LogLevel.Verbose);
+        Logger.SetLogLevel("AmbrosiaHelper", LogLevel.Verbose);
 #else
-        // release builds use info logging to reduce spam in log files
-        Logger.SetLogLevel(nameof(AmbrosiaHelperModule), LogLevel.Info);
+        Logger.SetLogLevel("AmbrosiaHelper", LogLevel.Info);
 #endif
     }
 

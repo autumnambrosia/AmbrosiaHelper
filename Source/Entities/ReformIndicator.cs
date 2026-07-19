@@ -56,7 +56,7 @@ public class ReformIndicator : Entity {
         }
         foreach (Image i in block.coldImages) {
             Rectangle cr = i.Texture.ClipRect;
-            //Console.WriteLine($"{cr.X},{cr.Y}");
+            //Logger.Debug("AmbrosiaHelper/ReformIndicator", $"{cr.X},{cr.Y}");
             Image image = new Image(
                 GFX.Game["objects/AmbrosiaHelper/core_outline"].GetSubtexture(cr.X-821, cr.Y-2138, 8, 8)
             ){
