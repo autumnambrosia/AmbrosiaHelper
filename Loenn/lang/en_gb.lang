@@ -11,7 +11,8 @@ entities.AmbrosiaHelper/ForceMoveField.placements.name.revokeonwalljump=Forcemov
 entities.AmbrosiaHelper/ForceMoveField.placements.description.revokeonwalljump=Revokes forcemove from the player if they walljump. (This entity is also jank)
 
 entities.AmbrosiaHelper/ForceMoveField.attributes.name.direction=Mode
-entities.AmbrosiaHelper/ForceMoveField.attributes.description.direction=What genre of forcemove to apply.\nLeft and Right apply forcemove in that direction.\nRevoke removes any forcemove the player already has.\nRevoke on Walljump also removes forcemove, but only when the player does a walljump (should be useful for walljumps directly after a spring).\nRevoke on walljump feels pretty jank honestly idk i didnt feel like fixing it rn
+entities.AmbrosiaHelper/ForceMoveField.attributes.description.direction=What genre of forcemove to apply.\nLeft and Right apply forcemove in that direction.\nRevoke removes any forcemove the player already has.
+#\nRevoke on Walljump also removes forcemove, but only when the player does a walljump (should be useful for walljumps directly after a spring).\nRevoke on walljump feels pretty jank honestly idk i didnt feel like fixing it rn
 
 entities.AmbrosiaHelper/ForceMoveField.attributes.description.time=Time to apply forcemove for in seconds. Will only do anything if the type is Left or Right.
 entities.AmbrosiaHelper/ForceMoveField.attributes.description.renders=Controls whether the field has any visuals or not
@@ -37,11 +38,11 @@ entities.AmbrosiaHelper/FlagOnForceMoveController.attributes.description.flag=oo
 
 # Honey
 entities.AmbrosiaHelper/BoostHoney.placements.name.left=Boost Honey (Left)
-entities.AmbrosiaHelper/BoostHoney.placements.description.left=Strange sticky substance that attaches to things like spikes and springs do.\nBehaves similarly to Wall Boosters; when you're on a surface with them, you'll get extra speed once you jump off.\nThe direction also toggles based off of core mode: it is vertical when Hot, and horizontal when Cold. Can be any direction on None core mode.
+entities.AmbrosiaHelper/BoostHoney.placements.description.left=Strange sticky substance that attaches to things like spikes and springs do.\nBehaves similarly to Wall Boosters; when you're on a surface with them, you'll get extra speed once you jump off.\nThe direction also toggles based off of core mode: it is upwards when Hot, and horizontal when Cold. Can be any direction on None core mode.
 entities.AmbrosiaHelper/BoostHoney.placements.name.right=Boost Honey (Right)
-entities.AmbrosiaHelper/BoostHoney.placements.description.right=Strange sticky substance that attaches to things like spikes and springs do.\nBehaves similarly to Wall Boosters; when you're on a surface with them, you'll get extra speed once you jump off.\nThe direction also toggles based off of core mode: it is vertical when Hot, and horizontal when Cold. Can be any direction on None core mode.
+entities.AmbrosiaHelper/BoostHoney.placements.description.right=Strange sticky substance that attaches to things like spikes and springs do.\nBehaves similarly to Wall Boosters; when you're on a surface with them, you'll get extra speed once you jump off.\nThe direction also toggles based off of core mode: it is upwards when Hot, and horizontal when Cold. Can be any direction on None core mode.
 entities.AmbrosiaHelper/BoostHoney.placements.name.up=Boost Honey (Up)
-entities.AmbrosiaHelper/BoostHoney.placements.description.up=Strange sticky substance that attaches to things like spikes and springs do.\nBehaves similarly to Wall Boosters; when you're on a surface with them, you'll get extra speed once you jump off.\nThe direction also toggles based off of core mode: it is vertical when Hot, and horizontal when Cold. Can be any direction on None core mode.
+entities.AmbrosiaHelper/BoostHoney.placements.description.up=Strange sticky substance that attaches to things like spikes and springs do.\nBehaves similarly to Wall Boosters; when you're on a surface with them, you'll get extra speed once you jump off.\nThe direction also toggles based off of core mode: it is upwards when Hot, and horizontal when Cold. Can be any direction on None core mode.
 
 entities.AmbrosiaHelper/BoostHoney.attributes.name.fallbackDir=Direction
 entities.AmbrosiaHelper/BoostHoney.attributes.description.fallbackDir=The direction for when the core mode is None or when it has to choose between two directions horizontally.\nIf it has to choose a horizontal direction, setting Up will default to Right.
@@ -51,7 +52,7 @@ entities.AmbrosiaHelper/BoostHoney.attributes.description.useCoreMode=i like my 
 
 # Metal Bumper
 entities.AmbrosiaHelper/MetalBumper.placements.name.normal=Metal Bumper
-entities.AmbrosiaHelper/MetalBumper.placements.description.normal=Like a bumper, but weirder. Instead of a normal Bumper's 4 zones, Metal Bumpers\nhave 8 symmetrical launch zones for each of the 8 directions. Additionally, in\nhot mode, the direction it launches you in is the opposite side you enter it,\nbut in cold mode, it's on the same side like a regular Bumper.\nDefaults to hot behavior on None core mode. Idea partially by evelyn
+entities.AmbrosiaHelper/MetalBumper.placements.description.normal=Like a bumper, but weirder. Instead of a normal Bumper's 4 zones, Metal Bumpers\nhave 8 symmetrical launch zones for each of the 8 directions. Additionally, in\nhot mode, the direction it launches you in is the opposite side you enter it,\nbut in cold mode, it's on the same side like a regular Bumper.\nIdea partially by evelyn
 
 # Like a bumper, but weirder. Launches you in a direction when you hit it.\nIn hot mode, the direction is the opposite side you enter it, but\nin cold mode, it's on the same side like a regular Bumper (although the trajectories are not exactly the same).\nDefaults to hot behavior on None core mode. Idea partially by evelyn
 
